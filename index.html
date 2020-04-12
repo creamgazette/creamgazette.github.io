@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<!--  This site was created in Webflow. http://www.webflow.com  -->
+<!--  Last Published: Sat Apr 11 2020 16:07:15 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="5e88bddeb914fad6585555fd" data-wf-site="5e7c9f4691827e9a54d6f37d">
+
+<head>
+  <meta charset="utf-8">
+  <title>CREAM</title>
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/creams.webflow.css" rel="stylesheet" type="text/css">
+  <link href="css/player.css" rel="stylesheet" type="text/css">
+  <link href="css/animate.min.css" rel="stylesheet" type="text/css">
+  <!-- [if lt IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.min.js" type="text/javascript"></script><![endif] -->
+  <script
+    type="text/javascript">!function (o, c) { var n = c.documentElement, t = " w-mod-"; n.className += t + "js", ("ontouchstart" in o || o.DocumentTouch && c instanceof DocumentTouch) && (n.className += t + "touch") }(window, document);</script>
+  <link href="images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="images/webclip.png" rel="apple-touch-icon">
+</head>
+
+<body class="body">
+
+  <div id="player" class="section-player animated fadeInDown">
+    <!-- Audio player -->
+    <div class="ap" id="ap">
+      <div class="ap__inner">
+        <div class="ap__item ap__item--playback">
+          <button class="ap__controls ap__controls--prev padding-top">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333"
+              width="24" height="24" viewBox="0 0 30 24">
+              <path d="M9.516 12l8.484-6v12zM6 6h2.016v12h-2.016v-12z"></path>
+            </svg>
+          </button>
+          <button class="ap__controls ap__controls--toggle">
+            <svg class="icon-play" version="1.1" xmlns="http://www.w3.org/2000/svg"
+              xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="24" height="24" viewBox="0 0 30 24"
+              data-play="M 12,26 18.5,22 18.5,14 12,10 z M 18.5,22 25,18 25,18 18.5,14 z"
+              data-pause="M 12,26 16.33,26 16.33,10 12,10 z M 20.66,26 25,26 25,10 20.66,10 z">
+              <path d="M 12,26 18.5,22 18.5,14 12,10 z M 18.5,22 25,18 25,18 18.5,14 z"></path>
+            </svg>
+          </button>
+          <button class="ap__controls ap__controls--next padding-top">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333"
+              width="24" height="24" viewBox="0 0 30 24">
+              <path d="M15.984 6h2.016v12h-2.016v-12zM6 18v-12l8.484 6z"></path>
+            </svg>
+          </button>
+        </div>
+        <div class="ap__item ap__item--track">
+          <div class="track">
+            <div class="track__title">Queue is empty</div>
+            <div class="track__time">
+              <span class="track__time--current">--</span>
+              <span> / </span>
+              <span class="track__time--duration">--</span>
+            </div>
+
+            <div class="progress-container">
+              <div class="progress">
+                <div class="progress__bar"></div>
+                <div class="progress__preload"></div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <div class="ap__item ap__item--settings">
+          <div class="ap__controls volume-container">
+            <button class="volume-btn padding-top">
+              <svg class="icon-volume-on" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="22" height="22" viewBox="0 0 30 24">
+                <path
+                  d="M14.016 3.234q3.047 0.656 5.016 3.117t1.969 5.648-1.969 5.648-5.016 3.117v-2.063q2.203-0.656 3.586-2.484t1.383-4.219-1.383-4.219-3.586-2.484v-2.063zM16.5 12q0 2.813-2.484 4.031v-8.063q2.484 1.219 2.484 4.031zM3 9h3.984l5.016-5.016v16.031l-5.016-5.016h-3.984v-6z">
+                </path>
+              </svg>
+              <svg class="icon-volume-off" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333" width="22" height="22" viewBox="0 0 30 24">
+                <path
+                  d="M12 3.984v4.219l-2.109-2.109zM4.266 3l16.734 16.734-1.266 1.266-2.063-2.063q-1.734 1.359-3.656 1.828v-2.063q1.172-0.328 2.25-1.172l-4.266-4.266v6.75l-5.016-5.016h-3.984v-6h4.734l-4.734-4.734zM18.984 12q0-2.391-1.383-4.219t-3.586-2.484v-2.063q3.047 0.656 5.016 3.117t1.969 5.648q0 2.25-1.031 4.172l-1.5-1.547q0.516-1.266 0.516-2.625zM16.5 12q0 0.422-0.047 0.609l-2.438-2.438v-2.203q2.484 1.219 2.484 4.031z">
+                </path>
+              </svg>
+            </button>
+            <div class="volume">
+              <div class="volume__track">
+                <div class="volume__bar"></div>
+              </div>
+            </div>
+          </div>
+          <!-- <button class="ap__controls ap__controls--repeat">
+          <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333"
+            width="24" height="24" viewBox="0 0 24 24">
+            <path
+              d="M17.016 17.016v-4.031h1.969v6h-12v3l-3.984-3.984 3.984-3.984v3h10.031zM6.984 6.984v4.031h-1.969v-6h12v-3l3.984 3.984-3.984 3.984v-3h-10.031z">
+            </path>
+          </svg>
+        </button> -->
+          <button class="ap__controls ap__controls--playlist padding-top-playlist">
+            <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="#333"
+              width="22" height="22" viewBox="0 0 30 24">
+              <path
+                d="M17.016 12.984l4.969 3-4.969 3v-6zM2.016 15v-2.016h12.984v2.016h-12.984zM18.984 5.016v1.969h-16.969v-1.969h16.969zM18.984 9v2.016h-16.969v-2.016h16.969z">
+              </path>
+            </svg>
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="display:none;opacity:0" class="section-logo"><a id="mail-cream-1"
+      data-w-id="028f7977-c5e4-671d-2419-68975bd96b8b" href="mailto:ambre.lev.al@gmail.com?subject=Send%20nudes"
+      class="link-block-1 w-inline-block"><img src="images/Logo_Contour.png"
+        srcset="images/Logo_Contour-p-500.png 500w, images/Logo_Contour-p-800.png 800w, images/Logo_Contour-p-1080.png 1080w, images/Logo_Contour-p-1600.png 1600w, images/Logo_Contour-p-2000.png 2000w, images/Logo_Contour.png 3508w"
+        sizes="(max-width: 3508px) 100vw, 3508px" data-w-id="ea182cf0-de3a-c38e-1cc6-b32563ae4ad6" alt=""></a><a
+      id="mail-cream" data-w-id="4ba3a6d0-e73a-90c8-7336-10137df65ffc"
+      href="mailto:ambre.lev.al@gmail.com?subject=Send%20nudes" class="link-block-2 w-inline-block"><img
+        src="images/Logo_Plein.png"
+        srcset="images/Logo_Plein-p-500.png 500w, images/Logo_Plein-p-800.png 800w, images/Logo_Plein-p-1080.png 1080w, images/Logo_Plein-p-1600.png 1600w, images/Logo_Plein-p-2000.png 2000w, images/Logo_Plein-p-2600.png 2600w, images/Logo_Plein-p-3200.png 3200w, images/Logo_Plein.png 3508w"
+        sizes="100vw" data-w-id="3726012a-d22e-8096-a5d2-ed4f72820afd" alt=""></a><a id="mail-cream-2"
+      href="mailto:ambre.lev.al@gmail.com?subject=Send%20nudes" class="link-block-3 w-inline-block"><img
+        src="images/Logo_Mobile.png"
+        srcset="images/Logo_Mobile-p-500.png 500w, images/Logo_Mobile-p-800.png 800w, images/Logo_Mobile-p-1080.png 1080w, images/Logo_Mobile-p-1600.png 1600w, images/Logo_Mobile-p-2000.png 2000w, images/Logo_Mobile-p-2600.png 2600w, images/Logo_Mobile-p-3200.png 3200w, images/Logo_Mobile.png 5906w"
+        sizes="(max-width: 479px) 95vw, (max-width: 767px) 50vw, 100vw" alt=""></a><img
+      src="images/Gazette_de_charme.png"
+      srcset="images/Gazette_de_charme-p-500.png 500w, images/Gazette_de_charme-p-800.png 800w, images/Gazette_de_charme-p-1080.png 1080w, images/Gazette_de_charme-p-1600.png 1600w, images/Gazette_de_charme-p-2000.png 2000w, images/Gazette_de_charme-p-2600.png 2600w, images/Gazette_de_charme-p-3200.png 3200w, images/Gazette_de_charme.png 3508w"
+      sizes="(max-width: 767px) 100vw, 45vw" alt="" class="img-gazette"></div>
+  <div class="section-background"><img src="images/background_mobile.jpg"
+      srcset="images/background_mobile-p-500.jpeg 500w, images/background_mobile-p-800.jpeg 800w, images/background_mobile.jpg 1003w"
+      sizes="100vw" alt="" class="background mobile"><img src="images/background.jpg"
+      srcset="images/background-p-500.jpeg 500w, images/background-p-800.jpeg 800w, images/background.jpg 1080w"
+      sizes="100vw" style="filter:blur(10px)" alt="" class="background"></div>
+  <div style="display:flex" class="section-disclaimer"><img src="images/Disclamer_Logo18ans.png"
+      srcset="images/Disclamer_Logo18ans-p-500.png 500w, images/Disclamer_Logo18ans-p-800.png 800w, images/Disclamer_Logo18ans-p-1080.png 1080w, images/Disclamer_Logo18ans.png 1417w"
+      sizes="100vw" alt="" class="disclaimer"><img src="images/Disclamer_BoutonOui.png"
+      srcset="images/Disclamer_BoutonOui-p-500.png 500w, images/Disclamer_BoutonOui.png 591w" sizes="100vw"
+      data-w-id="c8eab1ef-ec81-e2f1-db6e-cb73ef7c89ff" alt="" class="button-disclaimer" onclick="ohOuiClick()"></div>
+  <div class="section-chat">
+    <script id="cid0020000246646224912" data-cfasync="false" async src="http://st.chatango.com/js/gz/emb.js"
+      style="width: 330px;height: 350px;" class="no-display-chat">{ "handle": "lache-ton-cum", "arch": "js", "styles": { "a": "ff99ff", "b": 73, "c": "000000", "d": "000000", "e": "ffffff", "f": 74, "i": 74, "k": "ff99ff", "l": "ff99ff", "m": "ff99ff", "o": 74, "p": "11.43", "q": "ff99ff", "r": 73, "pos": "br", "cv": 1, "cvfnt": "'Helvetica Neue', Helvetica, Arial, sans-serif, sans-serif", "cvfntw": "bolder", "cvbg": "ff99ff", "cvbga": 74, "cvw": 100, "cvh": 30, "sbc": "bbbbbb", "surl": 0, "cnrs": "0.63" } }</script>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.4.1.min.220afd743d.js?site=5e7c9f4691827e9a54d6f37d"
+    type="text/javascript" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+    crossorigin="anonymous"></script>
+  <script src="js/webflow.js" type="text/javascript"></script>
+  <script src="js/player.js" type="text/javascript"></script>
+  <!-- [if lte IE 9]><script src="https://cdnjs.cloudflare.com/ajax/libs/placeholders/3.0.2/placeholders.min.js"></script><![endif] -->
+</body>
+
+</html>
