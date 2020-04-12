@@ -3,9 +3,13 @@ async function ohOuiClick() {
   console.log(document.getElementsByTagName("iframe")[0]);
   const player = document.getElementById("player");
   player.style.display = "block";
+
   const iframe = document.getElementsByTagName("iframe")[0];
-  iframe.style.display = "block";
-  iframe.classList.add("animated", "5s", "fadeInUp");
+  const chat = document.getElementById("frame-container");
+  // chat.appendChild(iframe);
+
+  // iframe.style.display = "block";
+  // iframe.classList.add("animated", "5s", "fadeInUp");
 }
 
 (function (window, undefined) {
@@ -773,14 +777,12 @@ AP.init({
     {
       icon: iconImage,
       title: "ASSMR",
-      file:
-        "./mp3/ASSMR.mp3",
+      file: "./mp3/ASSMR.mp3",
     },
     {
       icon: iconImage,
       title: "test",
-      file:
-        "./mp3/ASSMR.mp3",
+      file: "./mp3/ASSMR.mp3",
     },
   ],
 });
