@@ -2485,12 +2485,12 @@ new (function () {
         ],
       ],
     },
-    {
-      type: "linkandroidchrome",
-      rules: [
-        [{ platform: "ANDROID", atLeast: 4 }, { features: ["NOWEBSOCKET"] }],
-      ],
-    },
+    // {
+    //   type: "linkandroidchrome",
+    //   rules: [
+    //     [{ platform: "ANDROID", atLeast: 4 }, { features: ["NOWEBSOCKET"] }],
+    //   ],
+    // },
     {
       type: "linkandroidff",
       rules: [
