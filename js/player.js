@@ -1,15 +1,9 @@
 async function ohOuiClick() {
+  const chat = document.getElementById("section-chat");
+  chat.style.zIndex = "2";
   await new Promise((resolve) => setTimeout(resolve, 2000));
-  console.log(document.getElementsByTagName("iframe")[0]);
   const player = document.getElementById("player");
   player.style.display = "block";
-
-  const iframe = document.getElementsByTagName("iframe")[0];
-  const chat = document.getElementById("frame-container");
-  // chat.appendChild(iframe);
-
-  // iframe.style.display = "block";
-  // iframe.classList.add("animated", "5s", "fadeInUp");
 }
 
 (function (window, undefined) {
@@ -769,45 +763,11 @@ async function ohOuiClick() {
   window.AP = AudioPlayer;
 })(window);
 
-// TEST: image for web notifications
-var iconImage = "http://funkyimg.com/i/21pX5.png";
-
 AP.init({
   playList: [
     {
-      icon: iconImage,
       title: "ASSMR",
-      file: "./mp3/ASSMR.mp3",
-    },
-    {
-      icon: iconImage,
-      title: "test",
       file: "./mp3/ASSMR.mp3",
     },
   ],
 });
-
-// TEST: update playlist
-// document.getElementById("addSongs").addEventListener("click", function (e) {
-//   e.preventDefault();
-//   AP.update([
-//     {
-//       icon: iconImage,
-//       title: "District Four",
-//       file:
-//         "http://incompetech.com/music/royalty-free/mp3-royaltyfree/District%20Four.mp3",
-//     },
-//     {
-//       icon: iconImage,
-//       title: "Christmas Rap",
-//       file:
-//         "http://incompetech.com/music/royalty-free/mp3-royaltyfree/Christmas%20Rap.mp3",
-//     },
-//     {
-//       icon: iconImage,
-//       title: "Rocket Power",
-//       file:
-//         "http://incompetech.com/music/royalty-free/mp3-royaltyfree/Rocket%20Power.mp3",
-//     },
-//   ]);
-// });
