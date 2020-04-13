@@ -9007,20 +9007,6 @@ Webflow.require("ix2").init({
                 unit: "",
               },
             },
-            // {
-            //   id: "a-3-n-9",
-            //   actionTypeId: "GENERAL_DISPLAY",
-            //   config: {
-            //     delay: 0,
-            //     easing: "",
-            //     duration: 0,
-            //     value: "none",
-            //     target: {
-            //       selector: ".section-chat",
-            //       selectorGuids: ["6627e846-9c44-a25a-fa76-9288cb7f9535"],
-            //     },
-            //   },
-            // },
             {
               id: "a-3-n-11",
               actionTypeId: "STYLE_OPACITY",
@@ -9104,25 +9090,11 @@ Webflow.require("ix2").init({
                 unit: "",
               },
             },
-            // {
-            //   id: "a-3-n-10",
-            //   actionTypeId: "GENERAL_DISPLAY",
-            //   config: {
-            //     delay: 500,
-            //     easing: "",
-            //     duration: 0,
-            //     value: "flex",
-            //     target: {
-            //       selector: ".section-chat",
-            //       selectorGuids: ["6627e846-9c44-a25a-fa76-9288cb7f9535"],
-            //     },
-            //   },
-            // },
             {
               id: "a-3-n-12",
               actionTypeId: "STYLE_OPACITY",
               config: {
-                delay: 1000,
+                delay: 2000,
                 easing: "",
                 duration: 1000,
                 target: {
