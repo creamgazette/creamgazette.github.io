@@ -75,7 +75,7 @@ svg {
 .ap__item--playback > .ap__controls,
 .ap__item--settings > .ap__controls {
   -webkit-box-flex: 0;
-  flex: 0 25%;
+  flex: 0 50%;
 }
 
 @-webkit-keyframes fs {
