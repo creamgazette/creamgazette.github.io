@@ -162,7 +162,7 @@ svg {
 }
 
 .progress__bar {
-  background: steelblue;
+  background: #FD52FD;
   z-index: 1;
 }
 .progress__bar:after {
@@ -174,7 +174,7 @@ svg {
   margin-top: -3px;
   content: "";
   border-radius: 6px;
-  background: steelblue;
+  background: #FD52FD;
   opacity: 0;
   -webkit-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease;
@@ -298,7 +298,7 @@ svg {
   left: 0;
   right: 0;
   bottom: 0;
-  background: steelblue;
+  background: #FD52FD;
   height: 50%;
 }
 
