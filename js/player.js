@@ -769,13 +769,5 @@ AP.init({
       title: "ASSMR",
       file: "./mp3/ASSMR.mp3",
     },
-    {
-      title: "ASSMR",
-      file: "./mp3/ASSMR.mp3",
-    },
-    {
-      title: "ASSMR",
-      file: "./mp3/ASSMR.mp3",
-    },
   ],
 });
