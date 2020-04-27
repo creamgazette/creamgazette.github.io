@@ -30,6 +30,7 @@
   -webkit-align-items: flex-end;
   -ms-flex-align: end;
   align-items: flex-end;
+  margin-bottom: -15%;
 }
 
 .div-chat {
@@ -192,6 +193,10 @@
   .div-chat {
     width: 80%;
   }
+
+  .section-chat {
+    margin-bottom: -35%
+  }
 }
 
 @media screen and (max-width: 479px) {
@@ -229,4 +234,9 @@
   .div-chat {
     width: 100%;
   }
+
+  .section-chat {
+  width: 95%;
+  margin: auto;
+  margin-bottom: -30%
 }

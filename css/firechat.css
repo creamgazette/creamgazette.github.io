@@ -79,7 +79,7 @@
 #firechat audio,
 #firechat video {
   border: 0;
-  font-family: arial, helvetica, sans-serif;
+  font-family: 'Prata', serif;
   vertical-align: baseline;
   margin: 0;
   padding: 0;
@@ -239,8 +239,13 @@
 }
 #firechat .fourfifth {
   width: 79.57446808510639%;
+  padding-bottom: 3px;
 }
 #firechat .fivesixth {
+  background-color: rgba(0, 0, 0, 0);
+  color: #fafafa;
+  font-family: 'Prata', serif;
+  font-size: 16px;
   width: 82.9787234042553%;
 }
 #firechat .full {
@@ -257,6 +262,7 @@
 }
 #firechat label {
   display: block;
+  color: whitesmoke;
 }
 #firechat a {
   color: #005580;
@@ -333,8 +339,9 @@
   max-width: 45%;
 }
 #firechat .nav-tabs > li > a {
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  *border-top-left-radius: 15px;
+  *border-top-right-radius: 15px;
+  border-radius: 20px;
   display: flex;
   justify-content: center;
   color: whitesmoke;
@@ -350,22 +357,28 @@
   /* border-bottom-right-radius: 0; */
   /* border-bottom-left-radius: 0; */
   /* border-top-left-radius: 4px; */
-  padding: 4px 8px;
+  padding: 10px;
   margin-right: 2px;
   line-height: 20px;
   border: 1px solid transparent;
   /* border-color: #ccc; */
 }
+
+#firechat .nav > li > a:hover, #firechat .nav > li > a:focus {
+  background-color: rgba(234, 159, 236, 1);
+}
 #firechat .nav-tabs > .active > a,
 #firechat .nav-tabs > .active > a:focus {
   border-bottom-color: transparent;
   /* background-color: #f581fca6; */
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
-  cursor: default;
+ border-radius: 20px;
+  *border-top-right-radius: 20px;
+  cursor: pointer;
+  padding: 10px;
 }
+
 #firechat .nav-tabs > .active > a:hover {
-  /* background-color: #f681fc31; */
+  background-color: rgba(234, 159, 236, 1);
 }
 
 #firechat .tab-content {
@@ -376,8 +389,9 @@
 }
 #firechat .tab-content > .active {
   display: block;
-  /* background-color: #f581fca6; */
+  background-color:rgba(234, 159, 236, 0.5);
 }
+
 #firechat .caret {
   display: inline-block;
   width: 0;
@@ -401,6 +415,11 @@
   -ms-user-select: none;
   user-select: none;
   text-decoration: none;
+
+
+
+
+
 }
 #firechat .firechat-dropdown-toggle:focus,
 #firechat .firechat-dropdown-toggle:active {
@@ -413,8 +432,8 @@
 }
 #firechat .firechat-dropdown-menu {
   *zoom: 1;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  *border-top-left-radius: 15px;
+  *border-top-right-radius: 15px;
   /* -webkit-border-top-right-radius: 0;
   -webkit-border-bottom-right-radius: 4px;
   -webkit-border-bottom-left-radius: 4px;
@@ -426,7 +445,7 @@
   border-top-right-radius: 0;
   border-bottom-right-radius: 4px;
   border-bottom-left-radius: 4px; */
-  border-top-left-radius: 0;
+  *border-top-left-radius: 0;
   z-index: 1000;
   display: none;
   float: left;
@@ -445,6 +464,7 @@
   min-width: 98%;
   padding: 0;
   margin: -1px 0 0;
+  border-radius: 20px;
 }
 #firechat .firechat-dropdown-menu:before,
 #firechat .firechat-dropdown-menu:after {
@@ -456,20 +476,22 @@
   clear: both;
 }
 #firechat .firechat-dropdown-menu ul {
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color:rgba(234, 159, 236, 1);
   list-style: none;
   overflow-y: scroll;
   max-height: 280px;
+  padding: 20px;
 }
+
 #firechat .firechat-dropdown-menu ul > li > a {
   display: flex !important;
   justify-content: center;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 20px;
   color: whitesmoke !important;
   width: 100%;
   display: block;
-  padding: 10px 10px 10px 10px;
+  padding: 10px;
   clear: both;
   height: 48px;
   font-weight: normal;
@@ -477,6 +499,7 @@
   color: #333;
   white-space: nowrap;
 }
+
 #firechat .firechat-dropdown-menu ul > li > a.highlight {
   /* background-color: #d9edf7; */
 }
@@ -502,9 +525,10 @@
 #firechat .firechat-dropdown-header {
   position: relative;
   width: 100%;
-  padding: 10px 0;
-  background-color: #eee;
-  /* border-bottom: 1px solid #ccc; */
+  *padding: 10px 0;
+  background-color: rgba(234, 159, 236, 1);
+  padding-top: 20px;
+  *border-bottom: 1px solid #ccc;
 }
 #firechat .firechat-dropdown-footer {
   display: none;
@@ -531,11 +555,14 @@
   -moz-border-radius-bottomright: 4px;
   -moz-border-radius-bottomleft: 4px;
   -moz-border-radius-topleft: 0;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 4px;
-  border-top-left-radius: 0;
+  *border-top-right-radius: 0;
+  *border-bottom-right-radius: 4px;
+  *border-bottom-left-radius: 4px;
+  *border-top-left-radius: 0;
+  border-radius: 20px;
+  overflow: hidden;
 }
+
 #firechat .open > .firechat-dropdown-toggle {
   outline: 0;
   text-decoration: none;
@@ -547,11 +574,14 @@
   -moz-border-radius-bottomright: 0;
   -moz-border-radius-bottomleft: 0;
   -moz-border-radius-topleft: 4px;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-  border-top-left-radius: 4px;
+  * border-top-right-radius: 4px;
+  * border-bottom-right-radius: 0;
+  * border-bottom-left-radius: 0;
+  * border-top-left-radius: 4px;
+  border-radius: 20px;
+  margin-bottom: 20px;
 }
+
 #firechat .prompt-wrapper {
   position: absolute;
   z-index: 1000;
@@ -621,12 +651,16 @@
   height: 100%;
   width: 100%;
 }
+
+/*style button*/ 
+
 #firechat .btn {
-  font-size: initial !important;
+  /*font-size: initial !important; ambre*/
   display: flex !important;
   justify-content: center !important;
   align-items: center !important;
-  color: #eaeaeab8 !important;
+  color: whitesmoke !important;
+  font-size: 18px;
   -webkit-touch-callout: none;
   -webkit-user-select: none;
   -khtml-user-select: none;
@@ -635,20 +669,28 @@
   user-select: none;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
-  border-radius: 15px;
+  border-radius: 20px;
   height: 48px !important;
   display: inline-block;
   *display: inline;
   *zoom: 1;
   padding: 2px 5px;
-  margin-bottom: 0;
+  margin-bottom: 0px;
   text-align: center;
   vertical-align: middle;
   cursor: pointer;
-  color: #333;
-  font-size: 12px;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-  background-color: #f581fca6;
+  *text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
+  background-color: rgba(234, 159, 236, 0.5);
+  font-family: 'Prata', serif;
+ 
+
+  /* ambre si img ok en background 
+  background-image: url('../images/BoutonsNewChat2.png') ;
+  background-position: 50% 50%;
+  background-size: 400px;
+  background-repeat: no-repeat;
+  */
+
   /* background-image: -moz-linear-gradient(top, #fff, #e6e6e6);
   background-image: -webkit-gradient(
     linear,
@@ -677,6 +719,7 @@
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.2),
     0 1px 2px rgba(0, 0, 0, 0.05);
 }
+
 #firechat .btn:hover,
 #firechat .btn:focus,
 #firechat .btn:active,
@@ -684,20 +727,48 @@
 #firechat .btn.disabled,
 #firechat .btn[disabled] {
   color: #333;
-  background-color: #f581fca6;
-  *background-color: #f581fca6;
+  background-color: rgba(234, 159, 236, 1);
+  /* ambre *background-color: #f581fca6;*/
   outline: 0;
 }
 #firechat .btn:active,
 #firechat .btn.active {
-  background-color: #ccc;
+  background-color: rgba(234, 159, 236, 1);
 }
-#firechat .btn:first-child {
+
+
+#firechat .btn:first-child { 
   *margin-left: 0;
 }
+/* ambre si img ok en background 
+  background-image: url('../images/BoutonsNewChat.png');
+  background-position: 50% 50%;
+  background-size: 400px;
+  background-repeat: no-repeat;
+}*/
+
+/* ambre si img ok en background
+#firechat .btn:last-child { 
+  *margin-left: 0;
+  background-image: url('../images/BoutonsNewChat2.png');
+  background-position: 50% 50%;
+  background-size: 400px;
+  background-repeat: no-repeat;
+}*/
+
+/* ambre si img ok en background
+#firechat-btn-rooms .btn {
+  background-image: url('../images/BoutonsNewChat.png');
+  background-position: 50% 50%;
+  background-size: 400px;
+  background-repeat: no-repeat;
+}*/
+
+
 #firechat .btn:hover,
 #firechat .btn:focus {
   color: #333;
+  background-color:  rgba(234, 159, 236, 1);
   text-decoration: none;
   background-position: 0 -15px;
   -webkit-transition: background-position 0.1s linear;
@@ -705,6 +776,8 @@
   -o-transition: background-position 0.1s linear;
   transition: background-position 0.1s linear;
 }
+*/
+
 #firechat .btn.active,
 #firechat .btn:active {
   background-image: none;
@@ -763,18 +836,28 @@
 }
 #firechat {
   padding: 0;
-  font-family: sans-serif;
-  font-size: 12px;
+  font-family: 'Prata', serif;
+  font-size: 14px; 
+  /* ambre 
+  font-size: 12px;*/
   line-height: 18px;
 }
-#firechat input,
+
+#firechat input {
+  margin-bottom: 0px;
+  padding: 10px;
+}
+
 #firechat textarea {
   width: 100%;
-  font-family: sans-serif;
-  font-size: 12px;
+  min-height: 60px;
+  font-family: serif;
+  font-size: 16px;
   line-height: 18px;
-  padding: 2px 5px;
-  border: 1px solid #ccc;
+  padding: 20px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  border: 1px solid whitesmoke;
   -webkit-border-radius: 1px;
   -moz-border-radius: 1px;
   border-radius: 1px;
@@ -784,15 +867,15 @@
 }
 #firechat input:-moz-placeholder,
 #firechat textarea:-moz-placeholder {
-  color: #aaa;
+  color: rgba(234, 159, 236, 1);
 }
 #firechat input:-ms-input-placeholder,
 #firechat textarea:-ms-input-placeholder {
-  color: #aaa;
+  color: rgba(234, 159, 236, 1);
 }
 #firechat input::-webkit-input-placeholder,
 #firechat textarea::-webkit-input-placeholder {
-  color: #aaa;
+  color: rgba(234, 159, 236, 1);
 }
 #firechat input[disabled],
 #firechat textarea[disabled] {
@@ -805,17 +888,29 @@
   resize: none;
   height: 40px;
 }
-#firechat .search-wrapper {
-  -webkit-border-radius: 15px;
-  -moz-border-radius: 15px;
-  border-radius: 15px;
-  border: 1px solid #ccc;
-  margin: 0 5px;
-  padding: 2px 5px;
-  background: #fff;
+
+#firechat textarea:focus {
+  border: 1px solid rgba(234, 159, 236, 1);
 }
+
+#firechat textarea:active {
+  border: 1px solid rgba(234, 159, 236, 1);
+}
+
+#firechat .search-wrapper {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  border: 1px solid whitesmoke;
+  color : whitesmoke;
+  margin: 20px 20px 0px 20px;
+  padding: 5px;
+  *background: #fff;
+
+}
+
 #firechat .search-wrapper > input[type="text"] {
-  padding-left: 0;
+  padding-left: 1px;
   border: 0;
 }
 #firechat .search-wrapper > input[type="text"]:focus,
@@ -838,16 +933,19 @@
   vertical-align: top;
 }
 #firechat .message {
-  color: #ececec;
-  padding: 3px 5px;
-  border-bottom: 1px solid #cfcfcf;
+  color: whitesmoke;
+  border-bottom: 1px solid whitesmoke;
+  margin: 20px;
+  padding-bottom: 5px;
 }
+
 #firechat .message.highlighted {
   /* background-color: #d9edf7; */
 }
 #firechat .message .name {
   font-weight: bold;
   overflow-x: hidden;
+  font-family: sans-serif;
 }
 #firechat .message.message-self {
   color: #ececec;
@@ -864,6 +962,9 @@
 #firechat .message-content {
   word-wrap: break-word;
   padding-right: 45px;
+  padding-bottom: 5px;
+  font-family: serif;
+  font-size: 16px;
 }
 #firechat .message-content.red {
   color: red;
@@ -885,22 +986,23 @@
 }
 #firechat #firechat-tabs {
   height: 335px;
-  border-radius: 15px;
+  border-radius: 20px;
+  margin-top: 10px;
 }
 #firechat #firechat-tab-list {
-  background-color: #f581fca6;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  background-color: rgba(234, 159, 236, 0.5);
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 #firechat #firechat-tab-content {
   width: 100%;
-  background-color: #f581fca6;
+  *background-color:rgba(234, 159, 236, 1);
 }
 #firechat .tab-pane-menu {
   /* border: 1px solid #ccc; */
   border-top: 0;
   vertical-align: middle;
-  padding-bottom: 5px;
+  padding: 10px 10px 20px 10px;
 }
 #firechat .tab-pane-menu .firechat-dropdown {
   margin: 5px 0 0 5px;
@@ -919,7 +1021,7 @@
     no-repeat top left;
   opacity: 0.3;
   font-size: 22px;
-  font-family: Arial;
+  font-family: 'Prata', serif;
   font-weight: bold;
   overflow: hidden;
 }
@@ -929,7 +1031,7 @@
   background: transparent;
 }
 #firechat .icon.search {
-  background-position: 0 0;
+  background-position: 0 0;   
   width: 13px;
   height: 13px;
 }
