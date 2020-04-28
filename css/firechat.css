@@ -79,7 +79,7 @@
 #firechat audio,
 #firechat video {
   border: 0;
-  font-family: 'Prata', serif;
+  font-family: 'Inter', sans-serif;
   vertical-align: baseline;
   margin: 0;
   padding: 0;
@@ -244,7 +244,7 @@
 #firechat .fivesixth {
   background-color: rgba(0, 0, 0, 0);
   color: #fafafa;
-  font-family: 'Prata', serif;
+  font-family: 'Inter', sans-serif;
   font-size: 16px;
   width: 82.9787234042553%;
 }
@@ -681,7 +681,9 @@
   cursor: pointer;
   *text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
   background-color: rgba(234, 159, 236, 0.5);
-  font-family: 'Prata', serif;
+  font-family: 'Inter', sans-serif;
+}
+
  
 
   /* ambre si img ok en background 
@@ -836,7 +838,7 @@
 }
 #firechat {
   padding: 0;
-  font-family: 'Prata', serif;
+  font-family: 'Inter', sans-serif;
   font-size: 14px; 
   /* ambre 
   font-size: 12px;*/
@@ -851,7 +853,7 @@
 #firechat textarea {
   width: 100%;
   min-height: 60px;
-  font-family: serif;
+  font-family: 'Inter', sans-serif;
   font-size: 16px;
   line-height: 18px;
   padding: 20px;
@@ -945,7 +947,7 @@
 #firechat .message .name {
   font-weight: bold;
   overflow-x: hidden;
-  font-family: sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 #firechat .message.message-self {
   color: #ececec;
@@ -963,7 +965,7 @@
   word-wrap: break-word;
   padding-right: 45px;
   padding-bottom: 5px;
-  font-family: serif;
+  font-family: 'Inter', sans-serif;
   font-size: 16px;
 }
 #firechat .message-content.red {
@@ -1021,7 +1023,7 @@
     no-repeat top left;
   opacity: 0.3;
   font-size: 22px;
-  font-family: 'Prata', serif;
+  font-family: 'Inter', sans-serif;
   font-weight: bold;
   overflow: hidden;
 }
