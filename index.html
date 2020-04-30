@@ -151,54 +151,7 @@
   <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-auth.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-firestore.js"></script>
   <script src="https://www.gstatic.com/firebasejs/7.14.1/firebase-database.js"></script>
-  <!-- Firechat -->
-  <script src="https://cdn.firebase.com/libs/firechat/3.0.1/firechat.min.js"></script>
-  <script>
-    // Your web app's Firebase configuration
-    var firebaseConfig = {
-      apiKey: "AIzaSyDoPfo15tJWJzvBoufHvQTMiHPNwtZ3cVc",
-      authDomain: "cream-chat-2dfa0.firebaseapp.com",
-      databaseURL: "https://cream-chat-2dfa0.firebaseio.com",
-      projectId: "cream-chat-2dfa0",
-      storageBucket: "cream-chat-2dfa0.appspot.com",
-      messagingSenderId: "2329929119",
-      appId: "1:2329929119:web:d33a878120fab56baf49aa",
-      measurementId: "G-GQ1M3Z0BE2"
-    };
-    // Initialize Firebase
-    firebase.initializeApp(firebaseConfig);
-    // Get a reference to the firestore service
-    var firestore = firebase.firestore();
-    // Get a reference to the database service
-    var database = firebase.database();
-    firebase.analytics();
-  </script>
-
-  <script>
-    firebase.auth().onAuthStateChanged(function (user) {
-      if (user) {
-          initChat(user);
-        } else {
-          // If the user is not logged in, sign them in anonymously
-          firebase.auth().signInAnonymously().catch(function(error) {
-            console.log("Error signing user in anonymously:", error);
-          });
-        }
-    });
-
-    function initChat(user) {
-      console.log('initchat');
-      // Get a Firebase Database ref
-      var chatRef = database.ref();
-      // var chatRef = db.collection("chat").get();
-
-      // Create a Firechat instance
-      var chat = new FirechatUI(chatRef, document.getElementById("firechat-wrapper"));
-
-      // Set the Firechat user
-      chat.setUser(user.uid, "Anonymous" + user.uid.substr(10, 8));
-    }
-  </script>
+  
 </body>
 
 </html>
